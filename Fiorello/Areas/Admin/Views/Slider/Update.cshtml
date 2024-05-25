@@ -1,0 +1,20 @@
+﻿@model SliderUpdateVM
+
+
+<div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Update Slider</h4>
+            <img src="~/img/@Model.Images" style="width:350px" />
+            <form class="forms-sample" method="post" asp-action="Update" enctype="multipart/form-data">
+                <div class="mt-3 form-group">
+                    <label asp-for="NewImage">Image</label>
+                    <input asp-for="NewImage" class="form-control">
+                    <span class="text-danger mt-2" asp-validation-for="NewImage"></span>
+                </div>
+                <button type="submit" class="btn btn-gradient-primary me-2">Submit</button>
+                <a class="btn btn-light" asp-area="Admin" asp-controller="Slider" asp-action="Index">Back</a>
+            </form>
+        </div>
+    </div>
+</div>

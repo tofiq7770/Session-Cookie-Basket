@@ -1,0 +1,17 @@
+﻿@using Fiorello.ViewModels.Blogs
+@model BlogsDetailVM
+
+<div class="container mt-5 mx-3">
+
+    <h3><img  src="~/img/@Model.Image" width=200px; /></h3>
+    <h3>Title: @Model.Title</h3>
+    <h3>Description: @Model.Description</h3>
+    <h3>Date: @Model.Date</h3>
+    
+    <div class=mt-4>
+
+        <a class="btn btn-primary" asp-area="Admin" asp-controller="Blog" asp-action="Index">Back</a>
+        <a class="btn btn-primary" asp-area="Admin" asp-controller="Blog" asp-action="Update">Update</a>
+        <a class="btn btn-danger" asp-area="Admin" asp-controller="Blog" asp-action="Delete">Delete</a>
+    </div>
+</div>

@@ -1,0 +1,575 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-xVVam1KS4+Qt2OrFa+VdRUoXygyKIuNWUUUBZYv+n27STsJ7oDOHJgfF0bNKLMJF" crossorigin="anonymous">
+    @*<link rel="stylesheet" href="~/css/style.css">*@
+    <link rel="stylesheet" href="~/product/css/style.css">
+    <title>Fiorello: @Model.Product.Name</title>
+</head>
+
+    <header id="head">
+        <section class="navigation">
+            <div class="nav-container">
+                <div class="brand">
+                    <img src="~/product/images/h2-logo-1.png" alt="">
+                </div>
+                <nav>
+                    <div class="nav-mobile">
+                        <a id="nav-toggle" href="#!"><span></span></a>
+                    </div>
+                    <ul class="nav-list" style="height: 115px;">
+                        <li class="list">
+                            <a class="underline" asp-action="Index" asp-controller="Home">Home</a>
+                            <ul class="nav-dropdown">
+                                <li>
+                                    <a class=overline href="index.html">Main Home</a>
+                                </li>
+                                <li>
+                                    <a href="#">Grid Home</a>
+                                </li>
+                                <li>
+                                    <a href="#">Flower Shop</a>
+                                </li>
+                                <li>
+                                    <a href="#">Animated Slider</a>
+                                </li>
+                                <li>
+                                    <a href="#">Metro Showcase</a>
+                                </li>
+                                <li>
+                                    <a href="#">Carousel Showcase</a>
+                                </li>
+                                <li>
+                                    <a href="#">Landing</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="list">
+                            <a href="#">Pages</a>
+                            <ul class="nav-dropdown">
+                                <li>
+                                    <a href="about.html">About Us</a>
+                                </li>
+                                <li>
+                                    <a href="#">FAQ Page</a>
+                                </li>
+                                <li>
+                                    <a href="#">Flower Shop</a>
+                                </li>
+                                <li>
+                                    <a href="contact-us.html">Contact Us</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class=list>
+                            <a href="#">Shop</a>
+                            <ul class="nav-dropdown column-2">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <li>
+                                            <span>Product Types</span>
+                                        </li>
+                                        <li>
+                                            <a href="standart-product.html">Standard Product</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Grouped Product</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Variable Product</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Virtual Product</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">External Product</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Downloadable Product</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">On Sale Product</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Out Of Stock Product</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">New Product</a>
+                                        </li>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <li>
+                                            <span>Shop Pages</span>
+                                        </li>
+                                        <li>
+                                            <a href="#">My Account</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Cart</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Checkout</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Orders</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Downloads</a>
+                                        </li>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <li>
+                                            <span>Shop Types</span>
+                                        </li>
+                                        <li>
+                                            <a href="product-list.html">Product List</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Without Sidebar</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">With Category Filter</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">With Ordering Filter</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Shop Carousel</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Product Categories</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Single Category</a>
+                                        </li>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <li>
+                                            <span>Shop Layouts</span>
+                                        </li>
+                                        <li>
+                                            <a href="#">Two Columns Grid</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Three Columns Grid</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Four Columns Grid</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Four Columns Wide</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Five Columns Wide</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Six Columns Wide</a>
+                                        </li>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+                        <li class="list">
+                            <a href="#">Portfolio</a>
+                            <ul class="nav-dropdown">
+                                <li>
+                                    <a href="#">Standard</a>
+                                </li>
+                                <li>
+                                    <a href="#">Gallery</a>
+                                </li>
+                                <li>
+                                    <a href="#">Masonry</a>
+                                </li>
+                                <li class="port1">
+                                    <a href="#">Portfolio Layouts
+                                        <i class="fal fa-angle-right"></i>
+                                    </a>
+                                    <ul class="thirdtier">
+                                        <li>
+                                            <a href="#">Two Columns</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Three Columns</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Four Columns</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Four Columns Wide</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Five Columns Wide</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="port1">
+                                    <a href="#">Portfolio Single
+                                        <i class="fal fa-angle-right"></i>
+                                    </a>
+                                    <ul class="thirdtier">
+                                        <li>
+                                            <a href="#">Small Images</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Small Slider</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Big Images</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Big Slider</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Gallery</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="list">
+                            <a asp-action="Index" asp-controller="Blog">Blog</a>
+                            <ul class="nav-dropdown">
+                                <li>
+                                    <a href="#">Masonry</a>
+                                </li>
+                                <li>
+                                    <a href="#">Standard</a>
+                                </li>
+                                <li class="port1">
+                                    <a href="#">Post Types
+                                        <i class="fal fa-angle-right"></i>
+                                    </a>
+                                    <ul class="thirdtier">
+                                        <li>
+                                            <a href="#">Standard</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Gallery</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Link</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Quote</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Audio</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Video</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="list">
+                            <a href="#">Elements</a>
+                            <ul class="nav-dropdown">
+                                <li class="port1 port2">
+                                    <a href="#">
+                                        <i class="fal fa-angle-left"></i>
+                                        Classic
+                                    </a>
+                                    <ul class="thirdtier">
+                                        <li>
+                                            <a href="#">Accordions</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Tabs</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Buttons</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Video Button</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Contact Form</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="port1 port2">
+                                    <a href="#">
+                                        <i class="fal fa-angle-left"></i>
+                                        Infographic
+                                    </a>
+                                    <ul class="thirdtier">
+                                        <li>
+                                            <a href="#">Blog List</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Counters</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Countdown</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Google Maps</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Progress Bar</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Pie Charts</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="port1 port2">
+                                    <a href="#">
+                                        <i class="fal fa-angle-left"></i>
+                                        Interactive
+                                    </a>
+                                    <ul class="thirdtier">
+                                        <li>
+                                            <a href="#">Image Gallery</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Testimonials</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Team</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Banner</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Shop List</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Portfolio List</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="port1 port2">
+                                    <a href="#">
+                                        <i class="fal fa-angle-left"></i>
+                                        Typography
+                                    </a>
+                                    <ul class="thirdtier">
+                                        <li>
+                                            <a href="#">Headings</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Columns</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Section Title</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Blockquote</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Dropcaps</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Highlights</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Separators</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Custom Font</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="allicons">
+                        <div class="searchbar">
+                            <input type="text" placeholder="Search">
+                            <div class="icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                        </div>
+                        <div class="carticon">
+                            <a href="#">
+                                <i class="fal fa-shopping-bag"><span class="badge bg-danger">0</span></i>
+                            </a>
+                        </div>
+                        <div class="carttext">
+                            <span>
+                                Cart ($0)
+                            </span>
+                        </div>
+                    </div>
+
+                </nav>
+            </div>
+
+        </section>
+    </header>
+    <body>
+
+    <section id="innerid" style="height: 225px;">
+        <div class="innertext">
+            <div class="grid">
+                <h1>Product List</h1>
+                <span>Where flowers are our inspirationpos</span>
+            </div>
+        </div>
+    </section>
+        @RenderBody()
+      <footer id="footer-top">
+            <div class="holder">
+                <div class="top-holder">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="title-holder">
+                                    <h6 class="service">CUSTOMER SERVICE
+                                    </h6>
+                                </div>
+                                <div class="service-container">
+                                    <ul>
+                                        <li>
+                                            <a href="https://fiorello.qodeinteractive.com/contact-us/">Help & Contact
+                                                Us</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://fiorello.qodeinteractive.com/my-account/edit-account/">Returns
+                                                & Refunds</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://fiorello.qodeinteractive.com/product-list/">Online
+                                                Stores</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://fiorello.qodeinteractive.com/faq-page/">Terms &
+                                                Conditions</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="title-holder">
+                                    <h6 class="service">Company
+                                    </h6>
+                                </div>
+                                <div class="service-container">
+                                    <ul>
+                                        <li>
+                                            <a href="https://fiorello.qodeinteractive.com/about-us/">Abot Us</a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="https://fiorello.qodeinteractive.com/blog-standard-right-sidebar/">Blog</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://fiorello.qodeinteractive.com/blog-standard-right-sidebar/">Order
+                                                Tracking</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://fiorello.qodeinteractive.com/faq-page/">FAQ Page</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://fiorello.qodeinteractive.com/contact-us/">Contact Us</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://fiorello.qodeinteractive.com/my-account/">Login</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="title-holder">
+                                    <h6 class="service">SOCIAL MEDIA
+                                    </h6>
+                                </div>
+                                <div class="service-container">
+                                    <ul>
+                                        <li>
+                                            <a target="_blank" href="https://twitter.com/QodeInteractive">Twitter</a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank"
+                                                href="https://www.instagram.com/qodeinteractive/">Instagram</a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank" href="https://www.tumblr.com/">Tumblr</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://fiorello.qodeinteractive.com/faq-page/">Terms &
+                                                Conditions</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="title-holder">
+                                    <h6 class="service">Archive</h6>
+                                </div>
+                                <div class="service-container">
+                                    <ul>
+                                        <li>
+                                            <a
+                                                href="https://fiorello.qodeinteractive.com/portfolio-gallery/two-columns/">Designer
+                                                Shoes</a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="https://fiorello.qodeinteractive.com/elements/image-gallery/">Gallery</a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="https://fiorello.qodeinteractive.com/with-ordering-filter/">Pricing</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://fiorello.qodeinteractive.com/portfolio-standard/">Feature
+                                                Index</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://fiorello.qodeinteractive.com/my-account/">Login</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://fiorello.qodeinteractive.com/contact-us/">Help &
+                                                Support</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-row">
+                    <div class="col-lg-4 col-sm-12">
+                        ©️ 2021
+                        <a target="_blank" href="https://qodeinteractive.com/">Qode Interactive</a>
+                        , All Rights Reserved
+                    </div>
+                    <div class="col-lg-4 col-sm-12">
+                        <img src="~/product/images/footer-bottom-1.png" alt="">
+                    </div>
+                    <div class="col-lg-4 col-sm-12">
+                        <a href="https://www.instagram.com/qodeinteractive/">Instagram</a>
+                        <a class="saga-cekmek" href="https://www.facebook.com/QodeInteractive/">Facebook</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/@@popperjs/core@2.9.3/dist/umd/popper.min.js"
+            integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+            integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+            crossorigin="anonymous"></script>
+    </body>

@@ -1,0 +1,170 @@
+﻿@using Fiorello.ViewModels
+@model ProductVM
+
+@{
+    Layout = "~/Views/Shared/_DetailLayout.cshtml";
+}
+        <section id="product">
+            <div class="container">
+                <div class="row">
+
+                        <div class="col-lg-2 col-md-6 col-sm-12 gallery">
+                    @foreach (var item in Model.Product.ProductImage)
+                    {
+                        @if (item.IsMain==false)
+                        {
+                            <a href="#">
+                            <img src="~/img/@item.Name">
+                           </a>
+                        }
+                    }
+
+                    </div>
+                    
+                    <div class="col-lg-5 col-md-6 col-sm-12 image">
+                        <a href="#">
+                            <img src="~/img/@Model.Product.ProductImage.FirstOrDefault(m=>m.IsMain).Name"> </a>
+                    </div>
+                    <div class="col-lg-5 col-md-6 col-sm-12">
+                        <div class="summary">
+                            <h2 class="title">@Model.Product.Name</h2>
+                            <p class="price">Price: $@Model.Product.Price</p>
+                            <p class="price">Category: @Model.Product.Category.Name</p>
+                            <p class="text">Description: @Model.Product.Description</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tabs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                                    data-bs-target="#home" type="button" role="tab" aria-controls="home"
+                                    aria-selected="true">DESCRIPTION</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                                    type="button" role="tab" aria-controls="profile" aria-selected="false">ADDITONAL
+                                    INFORMATION</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
+                                    type="button" role="tab" aria-controls="contact" aria-selected="false">REWIEVS
+                                    (2)</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <h3>The power of flowers</h3>
+                            @Model.Product.Description
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <span> Weight: 1 kg </span>
+                            <span> Dimensions: 30 x 30 x 50 cm</span>
+                        </div>
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">Lorem,
+                            ipsum dolor sit amet consectetur adipisicing elit. Dolore, quaerat.</div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </section>
+
+        <section id="products" style="padding: 50px;">
+            <div class="container">
+                <h2 style="    color: #1b1b1b;
+                font-family: Montserrat;
+                font-size: 12px;
+                line-height: 2em;
+                font-weight: 500;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;">Related products</h2>
+                   <partial name = "_ProductsPartial" model="Model.Products"/>
+             @*   <div class="row">
+                    <div class="col-lg-3 length">
+
+                        <div class="flowers">
+                            <div class="itemBox">
+                                <div class="isoimage">
+                                    <img src="~/product/images/shop-8-img.jpg" alt="">
+                                </div>
+                                <div class="vishid">
+                                    <h6>Sweet Alyssum</h6>
+                                    <span class="spacart">Read more</span>
+                                    <span class="spaprice">$259</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 length">
+
+                        <div class="flowers">
+                            <div class="itemBox">
+                                <div class="isoimage">
+                                    <img src="~/product/images/shop-14-img.jpg" alt="">
+                                </div>
+                                <div class="vishid">
+                                    <h6>Majesty Palm</h6>
+                                    <span class="spacart">Add to cart</span>
+                                    <span class="spaprice">$259</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-3 length">
+
+                        <div class="flowers">
+                            <div class="itemBox">
+                                <div class="isoimage">
+                                    <img src="~/product/images/shop-7-img.jpg" alt="">
+                                </div>
+                                <div class="vishid">
+                                    <h6>Foxglove Flower</h6>
+                                    <span class="spacart">Add to cart</span>
+                                    <span class="spaprice">$259</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-3 length">
+
+                        <div class="flowers">
+                            <div class="itemBox">
+                                <div class="isoimage">
+                                    <img src="~/product/images/shop-9-img.jpg" alt="">
+                                </div>
+                                <div class="vishid">
+                                    <h6>Spring Snowflake</h6>
+                                    <span class="spacart">Add to cart</span>
+                                    <span class="spaprice">$170</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>*@
+            </div>
+
+            <ul>
+
+
+
+
+
+            </ul>
+        </section>
+
+
+
+
+    

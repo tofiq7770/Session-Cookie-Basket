@@ -1,0 +1,78 @@
+#florist {
+    padding-top: 120px;
+    padding-bottom: 100px;
+    .carousel {
+        .carousel-inner {
+            text-align: -webkit-center;
+            .carousel-item {
+                img {
+                }
+                .pop {
+                    color: #4b4747;
+                    font-family: Lora, serif;
+                    font-size: 24px;
+                    line-height: 1.5em;
+                    margin: 30px 0 0;
+                    width: 45%;
+                    p {
+                        font-style: italic;
+                    }
+                    .popmargintop {
+                        margin: 38px 0 0;
+                        h5 {
+                            color: #1b1b1b;
+                            font-family: Montserrat;
+                            font-size: 12px;
+                            line-height: 2em;
+                            font-weight: 500;
+                            letter-spacing: 0.1em;
+                            text-transform: uppercase;
+                        }
+                        h6 {
+                            display: block;
+                            font-size: 12px;
+                            letter-spacing: 0;
+                            line-height: 24px;
+                            text-transform: none;
+                            color: #afafaf;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#florist {
+    .carousel {
+        .carousel-control-prev {
+            i {
+                color: #b5b0b0;
+                position: absolute;
+                top: 50%;
+                z-index: 3;
+                width: 60px;
+                font-size: 40px;
+                left: 20rem;
+                &:hover {
+                    color: #2b2b2b;
+                }
+            }
+        }
+        .carousel-control-next-icon {
+            i {
+                color: #b5b0b0;
+                position: absolute;
+                top: 50%;
+                z-index: 3;
+                width: 60px;
+                font-size: 40px;
+                right: 20rem;
+                &:hover {
+                    color: #2b2b2b;
+                }
+            }
+        }
+    }
+}

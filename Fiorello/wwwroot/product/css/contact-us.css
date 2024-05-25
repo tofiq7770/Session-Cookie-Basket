@@ -1,0 +1,134 @@
+.mapouter {
+  position: relative;
+  text-align: right;
+  height: 320px;
+  width: 1349px;
+}
+
+.mapouter .gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 320px;
+  width: 1349px;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+  overflow-x: hidden !important;
+}
+
+section {
+  margin-left: -15px;
+  margin-right: -15px;
+  padding-top: 120px !important;
+  padding-bottom: 120px !important;
+}
+
+section .container .row .wrapper .item {
+  width: 565px;
+  height: 668px;
+  padding-top: 50px !important;
+  padding-right: 9% !important;
+  padding-bottom: 50px !important;
+  padding-left: 9% !important;
+  background-color: #f8f8f8 !important;
+}
+
+section .container .row .wrapper .item .image {
+  text-align: center;
+}
+
+section .container .row .wrapper .item .title {
+  text-align: center;
+  font-size: 40px;
+  line-height: 1.447em;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  color: #2b2b2b;
+}
+
+section .container .row .wrapper .item .text {
+  font-size: 17px;
+  margin-top: 29px;
+}
+
+section .container .row .wrapper .item .text p {
+  text-align: center;
+  font-size: 19px;
+  margin-top: 29px;
+  font-family: Lora, serif;
+  font-weight: 100;
+  color: grey;
+  line-height: 1.6em;
+}
+
+section .container .row .wrapper .item .image-2 {
+  text-align: center;
+}
+
+section .container .row .wrapper .item .image-2 img {
+  margin-top: 22px;
+}
+
+section .container .row .column-inner {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}
+
+section .container .row .column-inner .title-2 {
+  font-size: 38px;
+  line-height: 1.447em;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+section .container .row .column-inner .text-2 {
+  margin-top: 0px;
+  display: block;
+  margin: 14px 0 0;
+  font-family: Lora, serif;
+  line-height: 1.6em;
+  font-weight: 400;
+}
+
+section .container .row .form input {
+  background-color: white;
+  border-color: #e8e8e8;
+  color: #959595;
+  font-size: 12px;
+  width: 100%;
+  margin: 0 0 15px;
+  padding: 19px 18px;
+  font-family: Montserrat, sans-serif;
+  line-height: 20px;
+  font-weight: inherit;
+  border: 1px solid #e8e8e8;
+  border-radius: 0;
+  outline: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+}
+
+section .container .row .form textarea {
+  outline: none;
+}
+
+section .container .row .form button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #f34f3f;
+}
+/*# sourceMappingURL=contact-us.css.map */
