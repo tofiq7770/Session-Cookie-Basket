@@ -24,6 +24,8 @@ builder.Services.AddScoped<IExpertService, ExpertService>();
 builder.Services.AddScoped<ISurprizeListService, SurprizeListService>();
 builder.Services.AddScoped<ISliderInfosService, SliderInfosService>();
 builder.Services.AddScoped<ISettingService, SettingService>();
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
 
 #endregion
 

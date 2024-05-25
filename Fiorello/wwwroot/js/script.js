@@ -66,6 +66,30 @@ $(document).ready(function () {
         }
     })
 
+
+
+
+    //Basket Add
+
+
+    $(document).on("click", ".add-product-basket", function () {
+
+        let id = parseInt($(this).attr("data-id"));
+
+
+        $.ajax({
+            url: `home/AddProductToBasket?id=${id}`,
+            type: "Post",
+            success: function (response) {
+                $(".rounded-circle").text(response.count)
+                $(".basket-total-price").text(`CART($${response.total})`);
+            },
+        });
+    })
+
+
+
+
     // ACCORDION 
 
     $(document).on('click', '.question', function()

@@ -1,5 +1,6 @@
-﻿
-@model Dictionary<string,string>
+﻿@using Fiorella.ViewModels
+
+@model HeaderVM
 
 
 
@@ -12,7 +13,7 @@
                     <nav
                         class="navbar navbar-expand-lg d-flex d-lg-block justify-content-between d-xl-flex navbar-light py-3 py-lg-0">
                         <a class="navbar-brand" href="#">
-                            <img src="img/@Model["HeaderLogo"]" alt="" id="logo">
+                            <img src="img/@Model.Settings["HeaderLogo"]" alt="" id="logo">
                         </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -145,11 +146,21 @@
                                 </li>
                                 <li class="nav-item my-auto shop-cart">
                                     <i class="fas fa-shopping-bag"></i>
-                                    <sup class="rounded-circle">0</sup>
-                                    <span>CART ($0)</span>
+                                    <sup class="rounded-circle">@Model.BasketCount</sup>
+                                     <a asp-controller="Cart" asp-action="Index"> <span class="basket-total-price">CART ($@Model.BasketTotalPrice)</span></a>
+                                @if (Model.BasketCount == 0)
+                                {
                                     <ul class="list-unstyled py-3">
                                         <li class="">No products in the cart.</li>
                                     </ul>
+                                }
+                                else
+                                {
+                                    <ul class="list-unstyled py-3">
+                                        <li class="">YES</li>
+                                    </ul>
+                                }
+                                 
                                 </li>
                             </ul>
                         </div>
